@@ -24,7 +24,7 @@
     </child>
     <child>
       <object class="ttk.Button" id="start" named="True">
-        <property name="image">icons8-spielen-100.png</property>
+        <property name="image">start.png</property>
         <property name="text" translatable="yes">button1</property>
         <layout manager="place">
           <property name="anchor">nw</property>
@@ -41,7 +41,7 @@
     </child>
     <child>
       <object class="ttk.Button" id="stop" named="True">
-        <property name="image">icons8-stop-100.png</property>
+        <property name="image">stop.png</property>
         <property name="text" translatable="yes">button1</property>
         <layout manager="place">
           <property name="anchor">nw</property>
