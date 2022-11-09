@@ -24,9 +24,9 @@ class GuiApp:
             x=0,
             y=0)
         self.start = ttk.Button(toplevel1)
-        self.img_icons8spielen100 = tk.PhotoImage(
+        self.img_start = tk.PhotoImage(
             file="start.png")
-        self.start.configure(image=self.img_icons8spielen100, text='button1')
+        self.start.configure(image=self.img_start, text='button1')
         self.start.place(
             anchor="nw",
             height=155,
@@ -38,8 +38,8 @@ class GuiApp:
             x=-5,
             y=150)
         self.stop = ttk.Button(toplevel1)
-        self.img_icons8stop100 = tk.PhotoImage(file="stop.png")
-        self.stop.configure(image=self.img_icons8stop100, text='button1')
+        self.img_stop = tk.PhotoImage(file="stop.png")
+        self.stop.configure(image=self.img_stop, text='button1')
         self.stop.place(
             anchor="nw",
             height=155,
