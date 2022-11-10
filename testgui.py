@@ -1,63 +1,17 @@
-#!/usr/bin/python3
 import tkinter as tk
-import tkinter.ttk as ttk
+import pythonping
+def startping():
+    pythonping.ping('8.8.8.8', verbose=True, count=4 , interval=1)
 
+root = tk.Tk()
+root.title("Ping")
+root.geometry("300x300")
+root.resizable(False, False)
 
-class GuiApp:
-    def __init__(self, master=None):
-        # build ui
-        toplevel1 = tk.Tk() if master is None else tk.Toplevel(master)
-        toplevel1.configure(background="#95a8ff", height=200, width=200)
-        toplevel1.geometry("300x300")
-        toplevel1.resizable(False, False)
-        label1 = ttk.Label(toplevel1)
-        label1.configure(
-            borderwidth=4,
-            font="{Tondu Beta} 14 {}",
-            text='InternetActivator')
-        label1.place(
-            anchor="nw",
-            relheight=0.10,
-            relwidth=1,
-            relx=0,
-            rely=0,
-            x=0,
-            y=0)
-        self.start = ttk.Button(toplevel1)
-        self.img_start = tk.PhotoImage(
-            file="start.png")
-        self.start.configure(image=self.img_start, text='button1')
-        self.start.place(
-            anchor="nw",
-            height=155,
-            relheight=0.0,
-            relwidth=0.0,
-            relx=0,
-            rely=0,
-            width=155,
-            x=-5,
-            y=150)
-        self.stop = ttk.Button(toplevel1)
-        self.img_stop = tk.PhotoImage(file="stop.png")
-        self.stop.configure(image=self.img_stop, text='button1')
-        self.stop.place(
-            anchor="nw",
-            height=155,
-            relheight=0.0,
-            relwidth=0.0,
-            relx=0,
-            rely=0,
-            width=155,
-            x=150,
-            y=150)
+start = tk.Button(root, text="Start", command=startping)
+start.pack()
 
-        # Main widget
-        self.mainwindow = toplevel1
+stop = tk.Button(root, text="Stop", command=root.destroy)
+stop.pack()
 
-    def run(self):
-        self.mainwindow.mainloop()
-
-
-if __name__ == "__main__":
-    app = GuiApp()
-    app.run()
+root.mainloop()
