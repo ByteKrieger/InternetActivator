@@ -130,9 +130,7 @@ dmypy.json
 
 # PyCharm
 .idea/
-<<<<<<< HEAD
-=======
 
 #MyCode
-.vs/
->>>>>>> main
+test/
+output/
