@@ -11,3 +11,5 @@ except KeyboardInterrupt:
     print("InternetActivator wird geschlossen...")
     time.sleep(5)
 
+# Muss noch irgendwie bearbeitet werden, damit es nicht so lange dauert bis es beendet wird.
+
