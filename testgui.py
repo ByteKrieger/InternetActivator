@@ -4,7 +4,7 @@ import time
 
 def startping():
     while True:
-        pythonping.ping('8.8.8.8', verbose=True, count=4 , interval=1)
+        pythonping.ping('1.1.1.1', verbose=True, count=4 , interval=1)
         time.sleep(5)
 
 root = tk.Tk()
